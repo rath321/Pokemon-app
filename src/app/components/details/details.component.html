@@ -1,0 +1,23 @@
+<h1 style="text-align:center;">{{id}}</h1>
+
+
+<div id="table-component">
+	<table>
+		<thead>
+			<tr>
+				<th class="pl-15">abilities</th>
+
+
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let d of Data index as i">
+        <td>{{d.ability.name}}</td>
+
+			</tr>
+		</tbody>
+	</table>
+
+		<!-- <pagination-controls (pageChange)="page = $event"></pagination-controls> -->
+
+</div>

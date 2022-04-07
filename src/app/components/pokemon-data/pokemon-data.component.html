@@ -1,0 +1,27 @@
+
+
+<div style="text-align:center" id="table-component">
+  <h3>Popular Muscle Cars</h3>
+  <p><input placeholder="filter" type="text" [(ngModel)]="value" (keyup)="applyFilters(value)"></p>
+
+	<table style="text-align:center">
+		<thead>
+			<tr>
+				<th class="pl-15">ID</th>
+				<th>Name</th>
+				<th>Url</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let d of FilteredData index as i">
+        <td>{{i}}</td>
+				<td class="pl-15"><h4>{{d.name}}</h4></td>
+				<td><a style="cursor: pointer" (click)="fn(i+1)">{{d.url}}</a></td>
+
+			</tr>
+		</tbody>
+	</table>
+
+		<!-- <pagination-controls (pageChange)="page = $event"></pagination-controls> -->
+
+</div>
